@@ -3,12 +3,11 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Verdana', sans-serif;
 }
 
 body {
   margin: 0;
-  background: #ccc;
 }
 
 article {
@@ -16,6 +15,24 @@ article {
   height: 297mm;
   margin: 20px auto;
   position: relative;
+  
+  /* Fallback for older browsers */
+  background: url('/img/top-image.png') no-repeat top center;
+  background-size: contain;
+  
+  /* Modern browsers - multiple backgrounds with gradient overlay */
+  background: url('/img/top-image.png') no-repeat top center,
+              url('/img/bottom-image.png') no-repeat bottom center,
+              linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.15) 0%, 
+                rgba(0, 0, 0, 0) 20%, 
+                rgba(0, 0, 0, 0) 80%, 
+                rgba(0, 0, 0, 0.15) 100%);
+  background-size: contain;
+  background-color: white;
+  
+  border-top: 1mm solid #85991b;
+  border-bottom: 1mm solid #85991b;
 }
 
 address {
@@ -23,7 +40,6 @@ address {
   bottom: 8mm;
   right: 20mm;
 }
-
 h1 {
   position: absolute;
   top: 12mm;
@@ -36,6 +52,141 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+  background: url('/img/logo.png') no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Your CSS below here */
+nav {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 160px;
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  margin: 5px 0 5px 0;
+  font-family: 'DauphinPlain';
+  font-style: italic;
+  font-weight: normal;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  margin: 5px 50px 5px 50px;
+  line-height: 1.4;
+}
+
+.quote-sub {
+  font-size: 11px;
+}
+
+.container {
+  display: flex;
+  gap: 25px;
+  padding: 0 50px;
+  max-width: 100%;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 24px;
+  font-style: italic;
+  font-family: 'DauphinPlain';
+  font-weight: normal;
+  margin: 0px;
+}
+
+p {
+  margin: 0 0 6px 0;
+}
+
+fieldset {
+  border: none;
+  background: none;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.radio-group label {
+  margin: 0;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.number-input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  align-self: center;
+  border: 1px solid #ccc;
+}
+
+.checkbox-group {
+  flex: 1;
+}
+
+.checkbox-group label {
+  font-size: 10px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+button {
+ background: #eee;
+  color: black;
+  padding: 3px 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+label {
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
