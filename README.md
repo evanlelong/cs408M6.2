@@ -27,3 +27,9 @@ To run the tests for the project, run the following command:
 ```bash
 npm test
 ```
+
+## Brief
+
+This project was pretty fun to do and learn about more css and html rules. I thought it was not that bad
+to run this all youll need to do is the live preview I did not add any tests because we did not mess with any of the 
+JS for this project and it was all done in the html and css files.
